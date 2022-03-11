@@ -23,24 +23,30 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_increment_clicked()
 {
 
-    var++;
-    QString st = QString::number(var);
-         ui->label->setText(st);
-        QBuffer buffer;
-        buffer.open(QBuffer::ReadWrite);
-        QDataStream out(&buffer);
-        out << st;
-        int size = buffer.size();
-        sharedMemory.lock();
-        char *to = (char*)sharedMemory.data();
-        const char *from = buffer.data().data();
-        memcpy(to, from, qMin(sharedMemory.size(), size));
-        sharedMemory.unlock();
+//    var++;
+//    QString st = QString::number(var);
+//         ui->label->setText(st);
+//        QBuffer buffer;
+//        buffer.open(QBuffer::ReadWrite);
+//        QDataStream out(&buffer);
+//        out << st;
+//        int size = buffer.size();
+//        sharedMemory.lock();
+//        char *to = (char*)sharedMemory.data();
+//        const char *from = buffer.data().data();
+//        memcpy(to, from, qMin(sharedMemory.size(), size));
+//        sharedMemory.unlock();
+
+    arr[ind]++;
+    on_pushButton_connect_clicked();
+
 }
 
 
 void MainWindow::on_pushButton_decrement_clicked()
 {
+    arr[ind]--;
+    on_pushButton_connect_clicked();
 
 }
 
@@ -54,6 +60,9 @@ void MainWindow::on_pushButton_connect_clicked()
 //QString st = QString::number(var);
 //    QString st = "23,2,3,545,5,3,6,6";
 //     QString st;
+
+    //      (index,value)
+
   switch (ind){
 
     case 0:
@@ -126,6 +135,7 @@ void MainWindow::on_comboBox_currentIndexChanged(int index)
     ind=index;
 
     qDebug()<<index+1;
+
 
 }
 

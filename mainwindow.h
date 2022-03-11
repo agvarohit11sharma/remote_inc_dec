@@ -17,7 +17,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
       QSharedMemory sharedMemory;
-      int arr[8]={0,1,2,3,4,5,6,7};
+      int arr[8]={0};
     ~MainWindow();
 
 private slots:

@@ -66,6 +66,56 @@
      <string>Connect</string>
     </property>
    </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>40</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>peep</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>trigger</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>vt</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>pressure</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>rate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>fio2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>te</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ti</string>
+     </property>
+    </item>
+   </widget>
   </widget>
  </widget>
  <resources/>

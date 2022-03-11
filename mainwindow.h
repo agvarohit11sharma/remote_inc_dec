@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
       QSharedMemory sharedMemory;
+      int arr[8]={0,1,2,3,4,5,6,7};
     ~MainWindow();
 
 private slots:
@@ -26,8 +27,11 @@ private slots:
 
     void on_pushButton_connect_clicked();
 
+    void on_comboBox_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
+    QString st;
    void detach();
 };
 #endif // MAINWINDOW_H
